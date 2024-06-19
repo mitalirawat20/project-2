@@ -1,29 +1,11 @@
 # project-2
-import pandas as pd
-import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import BernoulliNB
+Applying data science preprocessing and visualisation techniques to the dataset titled "road accidents in india" can help improve road safety and traffic management.
+It can help in:
+1. Accident hotspot identification
+2. time-series analysis
+3. predictive modelling
+4. traffic managemnet
+5. public awareness
+   and many more.....
 
-data = pd.read_csv("/content/Youtube01-Psy.csv")
-print(data.sample(5))
-
-data = data[["CONTENT", "CLASS"]]
-print(data.sample(5))
-
-data["CLASS"] = data["CLASS"].map({0: "Not Spam",
-                                   1: "Spam Comment"})
-print(data.sample(5))
-
-x = np.array(data["CONTENT"])
-y = np.array(data["CLASS"])
-
-cv = CountVectorizer()
-x = cv.fit_transform(x)
-xtrain, xtest, ytrain, ytest = train_test_split(x, y, 
-                                                test_size=0.2, 
-                                                random_state=42)
-
-model = BernoulliNB()
-model.fit(xtrain, ytrain)
-print(model.score(xtest, ytest))
+With the help of these techiques, it is possible to create a safer and more efficient transportation system, reduce accidents and save lives. It also helps in improving road safety also.
